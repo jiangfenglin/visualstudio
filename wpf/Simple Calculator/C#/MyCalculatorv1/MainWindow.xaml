@@ -1,0 +1,48 @@
+﻿<Window x:Class="MyCalculatorv1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MyCalculator v1" Height="378" Width="266" WindowStartupLocation="CenterScreen" Topmost="True">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Height="41" TextWrapping="Wrap" VerticalAlignment="Top"  FontSize="20" Name="tb" Text="1+1=2" VerticalContentAlignment="Center" Margin="5" Grid.ColumnSpan="4"/>
+
+        <Button Content="Off" Margin="5" FontSize="18" Click="Off_Click_1" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Button Content="Del" Margin="5" FontSize="18" Click="Del_Click" Grid.Row="1"/>
+        <Button Content="R" Margin="5" FontSize="18" Click="R_Click" Grid.Row="1" Grid.Column="1"/>
+
+        <Button Content="7" Margin="5" FontSize="18" Click="Button_Click_1" Grid.Row="2"/>
+        <Button Content="8" Margin="5" FontSize="18" Click="Button_Click_1" Grid.Row="2" Grid.Column="1"/>
+        <Button Content="9" Margin="5" FontSize="18" Click="Button_Click_1" Grid.Row="2" Grid.Column="2"/>
+        <Button Content="/" Margin="5" FontSize="18" Click="Button_Click_1" Grid.Row="2" Grid.Column="3"/>
+
+        <Button Content="4" Margin="5" FontSize="18" Click="Button_Click_1" Grid.Row="3"/>
+        <Button Content="5" Margin="5" FontSize="18" Click="Button_Click_1" Grid.Row="3" Grid.Column="1"/>
+        <Button Content="6" Margin="5" FontSize="18" Click="Button_Click_1" Grid.Row="3" Grid.Column="2"/>
+        <Button Content="*" Margin="5" FontSize="18" Click="Button_Click_1" Grid.Row="3" Grid.Column="3"/>
+
+        <Button Content="1" Margin="5" FontSize="18" Click="Button_Click_1" Grid.Row="4"/>
+        <Button Content="2" Margin="5" FontSize="18" Click="Button_Click_1" Grid.Row="4" Grid.Column="1"/>
+        <Button Content="3" Margin="5" FontSize="18" Click="Button_Click_1" RenderTransformOrigin="0.548,0.413" Grid.Row="4" Grid.Column="2"/>
+        <Button Content="-" Margin="5" FontSize="18" Click="Button_Click_1" Grid.Row="4" Grid.Column="3"/>
+
+        <Button Content="0" Margin="5" FontSize="18" Click="Button_Click_1" Grid.Row="5"/>
+        <Button Content="=" Margin="5" FontSize="18" Click="Result_click" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button Content="+" Margin="5" FontSize="18" Click="Button_Click_1" Grid.Row="5" Grid.Column="3"/>
+
+
+    </Grid>
+</Window>
