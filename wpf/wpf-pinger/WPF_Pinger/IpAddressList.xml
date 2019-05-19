@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<servers>
+  <computer>
+    <name>ns1.telstra.net</name>
+    <ip>139.130.4.5</ip>
+  </computer>
+  <computer>
+    <name>Google DNS</name>
+    <ip>8.8.8.8</ip>
+  </computer>
+  <computer>
+    <name>OpenDNS</name>
+    <ip>208.67.222.222</ip>
+  </computer>
+  <computer>
+    <name>Cloudflare</name>
+    <ip>139.130.4.5</ip>
+  </computer>
+  <computer>
+    <name>24horas.cl</name>
+    <ip>104.25.91.24</ip>
+  </computer>
+  <computer>
+    <name>DaleAlbo.cl</name>
+    <ip>104.18.168.66</ip>
+  </computer>
+  <computer>
+    <name>24horas.cl</name>
+    <ip>104.25.91.24</ip>
+  </computer>
+  <computer>
+    <name>colocolo.cl</name>
+    <ip>52.20.28.127</ip>
+  </computer>
+ 
+</servers>

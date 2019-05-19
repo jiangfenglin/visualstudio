@@ -1,0 +1,119 @@
+﻿<Window x:Class="WPF_Pinger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Pinger"
+        mc:Ignorable="d"
+        Title="WPF Pinger Patricio Vega" Height="350" Width="525">
+    <Grid>
+        <Grid x:Name="GridPinger">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="40*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="40*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="40*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="40*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="40*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="40*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <ItemsControl Name="icTodoList">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="5"></UniformGrid>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="50*"/>
+                                    <RowDefinition Height="10"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1" />
+                                    <ColumnDefinition Width="50*" />
+                                    <ColumnDefinition Width="1" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.Resources>
+                                    <Style TargetType="Grid" >
+                                        <Setter Property="Margin" Value="1"/>
+
+                                        <Style.Triggers>
+
+                                            <DataTrigger Binding="{Binding Ping}" Value="true">
+
+                                                <Setter Property="Background" Value="#90EAC1"/>
+
+                                            </DataTrigger>
+
+                                            <DataTrigger Binding="{Binding Ping}" Value="false">
+
+                                                <Setter Property="Background" Value="LightGray"/>
+
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="FontFamily" Value="Century Gothic"/>
+                                        <Setter Property="FontSize" Value="18"/>
+                                        <Setter Property="FontStyle" Value="Italic"/>
+                                        <Setter Property="FontWeight" Value="UltraBold"/>
+                                        <Setter Property="LineHeight" Value="Auto"/>
+                                        <Setter Property="TextAlignment" Value="Center"/>
+                                        <Setter Property="Typography.NumeralStyle" Value="OldStyle"/>
+                                        <Setter Property="Typography.SlashedZero" Value="True"/>
+                                        <Setter Property="FontFamily" Value="Century Gothic"/>
+                                    </Style>
+                                </Grid.Resources>
+                                <Grid  Grid.Column="1" Grid.Row="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1"/>
+                                        <RowDefinition Height="50*"/>
+                                        <RowDefinition Height="1"/>
+                                        <RowDefinition Height="50*"/>
+                                        <RowDefinition Height="1"/>
+                                        <RowDefinition Height="50*"/>
+                                        <RowDefinition Height="1"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1" />
+                                        <ColumnDefinition Width="500*" />
+                                        <ColumnDefinition Width="1" />
+
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock FontSize="14" Text="{Binding Name}" TextAlignment="Left" Grid.Column="1"   Grid.Row="1" >
+
+                                    </TextBlock>
+                                    <TextBlock FontSize="14" Text="{Binding IpAddress}" TextAlignment="Left" Grid.Column="1" Grid.Row="3" >
+
+                                    </TextBlock>
+                                    <TextBlock FontSize="14" Text="{Binding InfoTime}" TextAlignment="Left" Grid.Column="1" Grid.Row="5" >
+
+                                    </TextBlock>
+                                </Grid>
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>
