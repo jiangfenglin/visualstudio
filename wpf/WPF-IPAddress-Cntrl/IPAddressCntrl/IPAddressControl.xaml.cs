@@ -55,6 +55,14 @@ namespace IPAddressCntrl
                 //    txtbox.Text = "0";
                 //}
             }
+
+            if (txtbox.Text.Length > 1)
+            {
+                if (txtbox.Text[0] == '0')
+                {
+                    txtbox.Text = txtbox.Text.Remove(0, 1);
+                }
+            }
             //fix caret index
             txtbox.CaretIndex = txtbox.Text.Length;
         }
