@@ -26,13 +26,13 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     <ColumnDefinition Width="auto"/>
                     <ColumnDefinition Width="auto" SharedSizeGroup="oct"/>
                 </Grid.ColumnDefinitions>
-                <TextBox Grid.Column="0" x:Name="txtboxFirstOctet" IsTabStop="True" TextChanged="txtbox_TextChanged" PreviewKeyDown="txtbox_PreviewKeyDown" KeyDown="txtbox_KeyDown" />
+                <TextBox Grid.Column="0" x:Name="txtboxFirstOctet" IsTabStop="True" TextChanged="txtbox_TextChanged" PreviewKeyDown="txtbox_PreviewKeyDown" KeyDown="txtbox_KeyDown" TextAlignment="Right" />
                 <Label Content="." Grid.Column="1"  />
-                <TextBox Grid.Column="2" x:Name="txtboxSecondOctet" IsTabStop="False" TextChanged="txtbox_TextChanged" PreviewKeyDown="txtbox_PreviewKeyDown" KeyDown="txtbox_KeyDown" />
+                <TextBox Grid.Column="2" x:Name="txtboxSecondOctet" IsTabStop="False" TextChanged="txtbox_TextChanged" PreviewKeyDown="txtbox_PreviewKeyDown" KeyDown="txtbox_KeyDown" TextAlignment="Right" />
                 <Label Content="." Grid.Column="3" />
-                <TextBox Grid.Column="4" x:Name="txtboxThirdOctet" IsTabStop="False" TextChanged="txtbox_TextChanged" PreviewKeyDown="txtbox_PreviewKeyDown" KeyDown="txtbox_KeyDown" />
+                <TextBox Grid.Column="4" x:Name="txtboxThirdOctet" IsTabStop="False" TextChanged="txtbox_TextChanged" PreviewKeyDown="txtbox_PreviewKeyDown" KeyDown="txtbox_KeyDown" TextAlignment="Right" />
                 <Label Content="." Grid.Column="5" />
-                <TextBox Grid.Column="6" x:Name="txtboxFourthOctet" IsTabStop="False" TextChanged="txtbox_TextChanged" PreviewKeyDown="txtbox_PreviewKeyDown" KeyDown="txtbox_KeyDown" />
+                <TextBox Grid.Column="6" x:Name="txtboxFourthOctet" IsTabStop="False" TextChanged="txtbox_TextChanged" PreviewKeyDown="txtbox_PreviewKeyDown" KeyDown="txtbox_KeyDown" TextAlignment="Right" />
             </Grid>
         </Border>
         <!-- This is simply a placeholder so that the octet textboxes are the correct size. Using MeasureString is "better" but more complicated solution -->
